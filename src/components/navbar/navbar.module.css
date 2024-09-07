@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 140px;
+}
+
+.logo {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.logoName {
+  font-style: italic;
+  font-size: 40px;
+  color: #333;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  font-size: 15px;
+}
+
+.link:hover {
+  padding: 10px;
+  border: none;
+  border-radius: 18px;
+  background: #d6f570de;
+}
+
+.bookTable {
+  padding: 10px;
+  border: 1px solid black;
+  color: black;
+  cursor: pointer;
+  font-size: 15px;
+  border-radius: 22px;
+  background: none;
+}
