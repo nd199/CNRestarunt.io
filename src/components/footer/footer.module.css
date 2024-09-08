@@ -1,9 +1,38 @@
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 50px;
+.footerContainer {
+  position: relative;
+  color: #fff;
+  background-color: #000;
+  padding: 60px 20px;
   font-size: 15px;
+  box-sizing: border-box;
+}
+
+.footerFull {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.leftFooter,
+.middleFooter,
+.rightFooter {
+  flex: 1;
+  padding: 0 15px;
+}
+
+.leftFooter {
+  max-width: 300px;
+}
+
+.middleFooter {
+  max-width: 250px;
+}
+
+.rightFooter {
+  max-width: 250px;
 }
 
 .social {
@@ -14,5 +43,37 @@
 
 .icon {
   cursor: pointer;
-  opacity: 80%;
+  opacity: 0.8;
+}
+
+.logoName {
+  font-size: 30px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.p {
+  margin: 20px 0;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.footerBottom {
+  text-align: center;
+  padding: 20px 0;
+  color: #fff;
+  font-size: 14px;
 }

@@ -1,7 +1,7 @@
 .page {
   height: calc(100vh - 140px - 50px);
   background-image: url("/home.png");
-  background-position: center;
+  height: 690px;
   background-size: cover;
   display: flex;
   align-items: center;

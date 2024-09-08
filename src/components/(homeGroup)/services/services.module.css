@@ -1,0 +1,76 @@
+.page {
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 1246px;
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 64px;
+  gap: 64px;
+}
+
+.title {
+  color: #bbb;
+  font-size: 55px;
+}
+
+.boxes {
+  height: 375px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.box {
+  width: 306px;
+  height: 475px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 1s ease;
+}
+
+.box:hover {
+  transform: scale(1.1);
+}
+
+.sImage {
+  margin-top: 20px;
+  object-fit: cover;
+  width: 100%;
+  padding: 10px;
+  height: 80%;
+  border-radius: 30px;
+}
+
+.textPart {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 10px;
+  gap: 10px;
+}
+
+.boxTitle {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.boxText {
+  font-size: 14px;
+  font-weight: 300;
+}
