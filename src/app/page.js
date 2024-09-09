@@ -1,12 +1,13 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import { Playfair_Display } from "next/font/google";
-import Menu from "@/components/(homeGroup)/menu/Menu";
-import AboutUs from "@/components/(homeGroup)/about/AboutUs";
-import Services from "@/components/(homeGroup)/services/Services";
-import Content from "@/components/(homeGroup)/content/Content";
-import Testimonial from "@/components/(homeGroup)/testimonials/Testimonial";
-import BlogAndArticles from "@/components/(homeGroup)/blogAndArticles/BlogAndArticles";
+import Menu from "@/components/home-group/menu/Menu";
+import AboutUs from "@/components/home-group/about/AboutUs";
+import Services from "@/components/home-group/services/Services";
+import Content from "@/components/home-group/content/Content";
+import Testimonial from "@/components/home-group/testimonials/Testimonial";
+import BlogAndArticles from "@/components/home-group/blogAndArticles/BlogAndArticles";
+import Link from "next/link";
 
 const logoFnt = Playfair_Display({
   subsets: ["latin-ext"],
@@ -27,8 +28,12 @@ export default function Home() {
             welcoming, culinary haven.
           </p>
           <di className={styles.buttons}>
-            <button className={styles.button}>Book A Table</button>
-            <button className={styles.btn}>Explore Menu</button>
+            <Link href={"/book"}>
+              <button className={styles.button}>Book A Table</button>
+            </Link>
+            <Link href={"/menu"}>
+              <button className={styles.btn}>Explore Menu</button>
+            </Link>
           </di>
         </div>
         <div className={styles.item}></div>
