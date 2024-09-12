@@ -19,7 +19,7 @@ const AboutUs = () => {
         <section1 className={styles.section}>
           <div className={styles.videoSection}>
             <video className={styles.video} autoPlay muted loop>
-              <source src="/AboutVideo.mp4" type="video/mp4" />
+              <source src="videos/AboutVideo.mp4" type="video/mp4" />
             </video>
             <div className={styles.overlay}>
               <h3 className={styles.overlayTitle}>Come and visit us</h3>

@@ -1,7 +1,9 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import styles from "./page.module.css";
 import { Playfair_Display } from "next/font/google";
 import ItemCard from "@/components/menu/ItemCard";
+import { items } from "@/utils/Utils";
 
 const logoFnt = Playfair_Display({
   subsets: ["latin-ext"],
@@ -9,45 +11,25 @@ const logoFnt = Playfair_Display({
   style: ["italic"],
 });
 
-const items = [
-  {
-    id: 1,
-    name: "Paneer Butter Masala",
-    price: "₹200",
-    imageName: "pbm.jpeg",
-    desc: "A classic Indian dish made with locally sourced paneer, butter, and spices. Pair it with naan or roti for a quick and easy meal.",
-  },
-  {
-    id: 2,
-    name: "ChocolateCake",
-    price: "₹150",
-    imageName: "ChocolateCake.jpeg",
-    desc: "A classic Indian dessert made with locally sourced milk, sugar, and cocoa powder. Pair it with brownies or cheesecakes for a healthy and delicious treat.",
-  },
-  {
-    id: 3,
-    name: "IceCream",
-    price: "₹100",
-    imageName: "iceCream.jpeg",
-    desc: "A classic Indian Ice cream made with locally sourced milk, sugar, and vanilla extract.",
-  },
-  {
-    id: 4,
-    imageName: "pannertikka.jpg",
-    name: "PaneerTikka",
-    price: "₹200",
-    desc: "A classic Indian dish made with locally sourced paneer, spices, and yogurt. Pair it with naan or roti for a quick and easy meal.",
-  },
-  {
-    id: 5,
-    imageName: "samosa.jpeg",
-    name: "Samosa",
-    price: "₹50",
-    desc: "A classic Indian dish made with locally sourced potatoes, spices, and yogurt. Pair it with naan or roti for a quick and easy meal.",
-  },
-];
-
 const Dashboard = () => {
+  const [category, setCategory] = useState("All");
+  const [type, setType] = useState("All");
+
+  const handleCategory = (category) => {
+    setCategory(category);
+  };
+
+  const handleType = (type) => {
+    setType(type);
+  };
+
+  const filteredItems = items.filter((item) => {
+    const matchCategory =
+      category === "All" || item.category.includes(category);
+    const matchType = type === "All" || item.type === type;
+    return matchCategory && matchType;
+  });
+
   return (
     <div className={styles.page}>
       <div className={styles.container}>
@@ -75,33 +57,70 @@ const Dashboard = () => {
         <div className={styles.containerMiddle}>
           <div className={styles.categories}>
             <hr className={styles.underline} />
-            <h2 className={styles.need}>Choose Your need</h2>
+            <h2 className={styles.need}>Choose Your Need</h2>
             <div className={styles.needButtons}>
-              <button className={styles.needButton}>All</button>
-              <button className={styles.needButton}>Breakfast</button>
-              <button className={styles.needButton}>Main Dish</button>
-              <button className={styles.needButton}>Drinks</button>
-              <button className={styles.needButton}>Desserts</button>
+              <button
+                className={styles.needButton}
+                onClick={() => handleType("All")}
+              >
+                All
+              </button>
+              <button
+                className={styles.needButton}
+                onClick={() => handleType("Breakfast")}
+              >
+                Breakfast
+              </button>
+              <button
+                className={styles.needButton}
+                onClick={() => handleType("Main Dish")}
+              >
+                Main Dish
+              </button>
+              <button
+                className={styles.needButton}
+                onClick={() => handleType("Snacks")}
+              >
+                Snacks
+              </button>
+              <button
+                className={styles.needButton}
+                onClick={() => handleType("Drinks")}
+              >
+                Drinks
+              </button>
+              <button
+                className={styles.needButton}
+                onClick={() => handleType("Desserts")}
+              >
+                Desserts
+              </button>
             </div>
             <hr className={styles.underline} />
           </div>
         </div>
         <div className={styles.containerBottom}>
+          <h2 className={styles.need}>
+            Choose Your Type - (Veg, Non-veg, Vegan, Sea Food)
+          </h2>
           <div className={styles.filter}>
-            <select className={styles.select}>
-              <option value="" defaultChecked>
-                Veg
+            <select
+              className={styles.select}
+              onChange={(e) => handleCategory(e.target.value)}
+            >
+              <option value="All" defaultChecked>
+                All
               </option>
-              <option value="">Non Veg</option>
-              <option value="">Vegan</option>
-              <option value="">Gluten Free</option>
-              <option value="">Sea Food</option>
+              <option value="vegetarian">Veg</option>
+              <option value="non-vegetarian">Non Veg</option>
+              <option value="vegan">Vegan</option>
+              <option value="Sea-Food">Sea Food</option>
             </select>
           </div>
         </div>
         <div className={styles.containerBottom}>
           <div className={styles.items}>
-            {items.map((item) => (
+            {filteredItems.map((item) => (
               <ItemCard key={item.id} item={item} />
             ))}
           </div>

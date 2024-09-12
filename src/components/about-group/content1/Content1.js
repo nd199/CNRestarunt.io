@@ -45,7 +45,7 @@ const Content1 = () => {
         </div>
         <div className={styles.section2}>
           <video className={styles.video} autoPlay muted loop>
-            <source src="/content2.mp4" type="video/mp4" />
+            <source src="/videos/content2.mp4" type="video/mp4" />
           </video>
         </div>
       </div>
