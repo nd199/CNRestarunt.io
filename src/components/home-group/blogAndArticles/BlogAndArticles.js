@@ -22,7 +22,7 @@ const BlogAndArticles = () => {
         <div className={styles.content}>
           <section1 className={styles.section1}>
             <Image
-              src={"/biryani.jpg"}
+              src={"/images/blog&articles/biryani.jpg"}
               width={430}
               height={390}
               alt="Biryani"
@@ -46,7 +46,7 @@ const BlogAndArticles = () => {
             <section2Top className={styles.section2Top}>
               <section2TopPart1 className={styles.section2TopPart1}>
                 <Image
-                  src={"/burger.png"}
+                  src={"/images/blog&articles/burger.png"}
                   width={420}
                   height={420}
                   alt="burger"
@@ -67,7 +67,7 @@ const BlogAndArticles = () => {
               </section2TopPart1>
               <section2TopPart2 className={styles.section2TopPart2}>
                 <Image
-                  src={"/PodiIdili.jpeg"}
+                  src={"/images/blog&articles/PodiIdili.jpeg"}
                   width={420}
                   height={420}
                   alt="podiIdli"
@@ -90,7 +90,7 @@ const BlogAndArticles = () => {
             <section2Bottom className={styles.section2Bottom}>
               <section2BottomPart1 className={styles.section2BottomPart1}>
                 <Image
-                  src={"/Cakes.png"}
+                  src={"/images/blog&articles/Cakes.png"}
                   width={420}
                   height={420}
                   alt="cakes"
@@ -111,7 +111,7 @@ const BlogAndArticles = () => {
               </section2BottomPart1>
               <section2BottomPart2 className={styles.section2BottomPart2}>
                 <Image
-                  src={"/gulabJamun.jpg"}
+                  src={"/images/blog&articles/gulabJamun.jpg"}
                   width={420}
                   height={420}
                   alt="jamun"

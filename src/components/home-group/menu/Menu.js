@@ -18,7 +18,7 @@ const Menu = () => {
           <div className={styles.box}>
             <div className={styles.iconShadow}>
               <Image
-                src="/platter.png"
+                src="/images/menu/home:menu/platter.png"
                 width={62}
                 height={60}
                 alt="breakfast"
@@ -34,7 +34,7 @@ const Menu = () => {
           <div className={styles.box}>
             <div className={styles.iconShadow}>
               <Image
-                src="/lunch.png"
+                src="/images/menu/home:menu/lunch.png"
                 width={62}
                 height={60}
                 alt="main dish"
@@ -50,7 +50,7 @@ const Menu = () => {
           <div className={styles.box}>
             <div className={styles.iconShadow}>
               <Image
-                src="/cocktail.png"
+                src="/images/menu/home:menu/cocktail.png"
                 width={62}
                 height={60}
                 alt="drinks"
@@ -66,7 +66,7 @@ const Menu = () => {
           <div className={styles.box}>
             <div className={styles.iconShadow}>
               <Image
-                src="/cake.png"
+                src="/images/menu/home:menu/cake.png"
                 width={62}
                 height={60}
                 alt="desserts"

@@ -7,7 +7,7 @@
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 1001;
 }
 .navbar.sticky {
   position: fixed;
@@ -60,6 +60,12 @@
   background: #d6f570de;
 }
 
+.active {
+  padding: 10px;
+  border-radius: 18px;
+  background: #d6f570de;
+}
+
 .bookTable {
   padding: 10px 20px;
   border: 1px solid black;
@@ -74,4 +80,92 @@
 
 .bookTable:hover {
   transform: scale(1.1);
+}
+
+.burgerMenu {
+  display: none;
+  cursor: pointer;
+}
+
+.burgerLine {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+.burgerMenu.active .burgerLine:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+
+.burgerMenu.active .burgerLine:nth-child(2) {
+  opacity: 0;
+}
+
+.burgerMenu.active .burgerLine:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.navMenu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.navMenu.mobile {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 80px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 200px;
+  border-radius: 8px;
+}
+
+.navMenu.mobile.active {
+  display: flex;
+}
+
+.navMenu.mobile .link {
+  padding: 15px;
+  font-size: 18px;
+}
+
+.navMenu.mobile .link:hover {
+  background: #d6f570de;
+}
+
+.hideButton {
+  display: none;
+}
+
+@media screen and (max-width: 980px) {
+  .logoName {
+    font-size: 30px;
+  }
+  .bookTable {
+    width: 120px;
+    height: 45px;
+    font-size: 12.5px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .links {
+    display: none;
+  }
+
+  .burgerMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logoName {
+    font-size: 30px;
+  }
 }

@@ -12,7 +12,7 @@ const Footer = () => {
       <section className={styles.footerFull}>
         <div className={styles.leftFooter}>
           <Link href="/" className={`${styles.logo} ${logoFnt.className}`}>
-            <Image src="/logo.png" width={70} height={70} alt="logo" />
+            <Image src="/images/logo.png" width={70} height={70} alt="logo" />
             <span className={styles.logoName}>Cn Restaurant.io</span>
           </Link>
           <p className={styles.p}>
@@ -22,28 +22,28 @@ const Footer = () => {
           </p>
           <div className={styles.social}>
             <Image
-              src="/1.png"
+              src="/images/socials/1.png"
               width={25}
               height={25}
               className={styles.icon}
               alt="Social icon 1"
             />
             <Image
-              src="/2.png"
+              src="/images/socials/2.png"
               width={25}
               height={25}
               className={styles.icon}
               alt="Social icon 2"
             />
             <Image
-              src="/3.png"
+              src="/images/socials/3.png"
               width={25}
               height={25}
               className={styles.icon}
               alt="Social icon 3"
             />
             <Image
-              src="/4.png"
+              src="/images/socials/4.png"
               width={25}
               height={25}
               className={styles.icon}

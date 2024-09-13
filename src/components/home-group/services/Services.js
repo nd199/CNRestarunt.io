@@ -19,7 +19,7 @@ const Services = () => {
         <div className={styles.boxes}>
           <div className={styles.box}>
             <Image
-              src={"/catering.jpeg"}
+              src={"/images/services/catering.jpeg"}
               width={206}
               height={220}
               alt="catering"
@@ -34,7 +34,7 @@ const Services = () => {
           </div>
           <div className={styles.box}>
             <Image
-              src={"/birthday.jpg"}
+              src={"/images/services/birthday.jpg"}
               width={206}
               height={220}
               alt="birthdays"
@@ -49,7 +49,7 @@ const Services = () => {
           </div>
           <div className={styles.box}>
             <Image
-              src={"/wedding.jpeg"}
+              src={"/images/services/wedding.jpeg"}
               width={206}
               height={220}
               alt="wedding"
@@ -64,7 +64,7 @@ const Services = () => {
           </div>
           <div className={styles.box}>
             <Image
-              src={"/events.jpg"}
+              src={"/images/services/events.jpg"}
               width={206}
               height={220}
               alt="events"

@@ -20,12 +20,9 @@ a {
 }
 
 .container {
-  margin-top: 20px;
-  max-width: 1366px;
+  max-width: 100vw;
   min-height: 100vh;
   margin: 0 auto;
-  padding: 0 60px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }

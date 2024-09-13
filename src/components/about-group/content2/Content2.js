@@ -19,7 +19,7 @@ const Content2 = () => {
             <div className={styles.circle}>
               <div className={styles.circleUserAv}>
                 <Image
-                  src="/swiggy.png"
+                  src="/images/partners/swiggy.png"
                   width={1460}
                   height={1460}
                   alt="avatar"
@@ -30,7 +30,7 @@ const Content2 = () => {
             <div className={styles.circle}>
               <div className={styles.circleUserAv}>
                 <Image
-                  src="/zomato.jpeg"
+                  src="/images/partners/zomato.jpeg"
                   width={1460}
                   height={1460}
                   alt="avatar"
@@ -41,7 +41,7 @@ const Content2 = () => {
             <div className={styles.circle}>
               <div className={styles.circleUserAv}>
                 <Image
-                  src="/Uber.png"
+                  src="/images/partners/Uber.png"
                   width={1460}
                   height={1460}
                   alt="avatar"
@@ -52,7 +52,7 @@ const Content2 = () => {
             <div className={styles.circle}>
               <div className={styles.circleUserAv}>
                 <Image
-                  src="/dunzo.png"
+                  src="/images/partners/dunzo.png"
                   width={1460}
                   height={1460}
                   alt="avatar"
@@ -63,7 +63,7 @@ const Content2 = () => {
             <div className={styles.circle}>
               <div className={styles.circleUserAv}>
                 <Image
-                  src="/dominos.jpeg"
+                  src="/images/partners/dominos.jpeg"
                   width={1460}
                   height={1460}
                   alt="avatar"
@@ -74,7 +74,7 @@ const Content2 = () => {
             <div className={styles.circle}>
               <div className={styles.circleUserAv}>
                 <Image
-                  src="/eat.png"
+                  src="/images/partners/eat.png"
                   width={1460}
                   height={1460}
                   alt="avatar"
@@ -85,7 +85,7 @@ const Content2 = () => {
             <div className={styles.circle}>
               <div className={styles.circleUserAv}>
                 <Image
-                  src="/pizzaHut.jpeg"
+                  src="/images/partners/pizzaHut.jpeg"
                   width={1460}
                   height={1460}
                   alt="avatar"
@@ -96,7 +96,7 @@ const Content2 = () => {
             <div className={styles.circle}>
               <div className={styles.circleUserAv}>
                 <Image
-                  src="/deliveroo.png"
+                  src="/images/partners/deliveroo.png"
                   width={1460}
                   height={1460}
                   alt="avatar"

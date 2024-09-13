@@ -1,11 +1,29 @@
 .page {
-  height: calc(100vh - 140px - 50px);
+  width: 100%;
+}
+
+.section1 {
+  height: calc(100vh - 80px);
   background-image: url("/images/home.png");
-  height: 690px;
   background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.section2,
+.section3,
+.section4,
+.section5,
+.section6,
+.section7 {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background-color: #f5f5f5;
 }
 
 .texts {
@@ -22,7 +40,6 @@
 .title {
   font-size: 76px;
   line-height: normal;
-  line-height: 69px;
 }
 
 .subTitle {

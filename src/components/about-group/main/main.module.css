@@ -1,5 +1,6 @@
+/* General Styles */
 .page {
-  max-width: 1457;
+  max-width: 1457px;
   height: 790px;
   display: flex;
   flex-direction: column;
@@ -47,8 +48,7 @@
 }
 
 .title2 {
-  font-size: 25px;
-  font-size: 30px;
+  font-size: 30px; /* Corrected to a single font-size property */
   font-weight: 300;
 }
 
@@ -69,12 +69,10 @@
 }
 
 .MoreButton:hover {
-  padding: 10px;
-  border: 0.5px solid black;
-  border-radius: 30px;
   transform: scale(1.1);
 }
 
+/* Overlay Styles */
 .overlay {
   position: absolute;
   width: 291px;
@@ -103,4 +101,140 @@
 
 .overlayIcon {
   color: #fff;
+}
+
+@media (max-width: 480px) {
+  .page {
+    height: auto;
+    margin-top: 0;
+  }
+
+  .video {
+    margin-left: 0;
+    transform: scale(1);
+  }
+
+  .sec {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .section {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .title2 {
+    font-size: 22px;
+  }
+
+  .p1,
+  .p2 {
+    font-size: 14px;
+  }
+
+  .MoreButton {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .overlay {
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    padding: 20px;
+  }
+
+  .overlayTitle {
+    font-size: 16px;
+  }
+
+  .overlaySubtitle {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .sec {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .section {
+    width: 70%;
+    padding: 20px;
+  }
+
+  .title2 {
+    font-size: 26px;
+  }
+
+  .p1,
+  .p2 {
+    font-size: 15px;
+  }
+
+  .MoreButton {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .overlay {
+    width: 80%;
+    height: auto;
+    bottom: -100px;
+    right: -20px;
+    padding: 25px;
+  }
+
+  .overlayTitle {
+    font-size: 18px;
+  }
+
+  .overlaySubtitle {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .sec {
+    gap: 40px;
+  }
+
+  .section {
+    width: 60%;
+    padding: 25px;
+  }
+
+  .title2 {
+    font-size: 28px;
+  }
+
+  .p1,
+  .p2 {
+    font-size: 15px;
+  }
+
+  .MoreButton {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .overlay {
+    width: 90%;
+    height: auto;
+    bottom: -120px;
+    right: -30px;
+    padding: 25px;
+  }
+
+  .overlayTitle {
+    font-size: 18px;
+  }
+
+  .overlaySubtitle {
+    font-size: 12px;
+  }
 }

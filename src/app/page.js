@@ -1,7 +1,6 @@
-import Image from "next/image";
 import styles from "./page.module.css";
 import { Playfair_Display } from "next/font/google";
-import Menu from "@/components/home-group/menu/Menu";
+import Menu from "../components/home-group/menu/Menu";
 import AboutUs from "@/components/home-group/about/AboutUs";
 import Services from "@/components/home-group/services/Services";
 import Content from "@/components/home-group/content/Content";
@@ -17,8 +16,8 @@ const logoFnt = Playfair_Display({
 
 export default function Home() {
   return (
-    <sections>
-      <section1 className={styles.page}>
+    <div className={styles.page}>
+      <section className={styles.section1}>
         <div className={styles.texts}>
           <div className={logoFnt.className}>
             <span className={styles.title}>Best food for your taste </span>
@@ -27,35 +26,35 @@ export default function Home() {
             Discover delectable cuisine and unforgettable moments in our
             welcoming, culinary haven.
           </p>
-          <di className={styles.buttons}>
+          <div className={styles.buttons}>
             <Link href={"/book"}>
               <button className={styles.button}>Book A Table</button>
             </Link>
             <Link href={"/menu"}>
               <button className={styles.btn}>Explore Menu</button>
             </Link>
-          </di>
+          </div>
         </div>
-        <div className={styles.item}></div>
-      </section1>
-      <section2>
+      </section>
+
+      <section className={styles.section2}>
         <Menu />
-      </section2>
-      <section3>
+      </section>
+      <section className={styles.section3}>
         <AboutUs />
-      </section3>
-      <section4>
+      </section>
+      <section className={styles.section4}>
         <Services />
-      </section4>
-      <section5>
+      </section>
+      <section className={styles.section5}>
         <Content />
-      </section5>
-      <section5>
+      </section>
+      <section className={styles.section6}>
         <Testimonial />
-      </section5>
-      <section5>
+      </section>
+      <section className={styles.section7}>
         <BlogAndArticles />
-      </section5>
-    </sections>
+      </section>
+    </div>
   );
 }

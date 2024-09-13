@@ -17,7 +17,7 @@ const Content = () => {
           <section1 className={styles.section1}>
             <sectionLeft>
               <Image
-                src={"/CookTogether.jpeg"}
+                src={"/images/offer&Delivery/CookTogether.jpeg"}
                 width={331}
                 height={500}
                 alt="main"
@@ -26,14 +26,14 @@ const Content = () => {
             </sectionLeft>
             <sectionRight>
               <Image
-                src={"/NonVeg.jpeg"}
+                src={"/images/offer&Delivery/NonVeg.jpeg"}
                 width={240}
                 height={240}
                 alt="side1"
                 className={styles.Image}
               />
               <Image
-                src={"/veg.jpeg"}
+                src={"/images/offer&Delivery/veg.jpeg"}
                 width={240}
                 height={250}
                 alt="side2"
@@ -52,7 +52,7 @@ const Content = () => {
             <div className={styles.quickPoints}>
               <div className={styles.quickPoint}>
                 <Image
-                  src="/delivery.png"
+                  src="/images/offer&Delivery/delivery.png"
                   width={30}
                   height={30}
                   alt="delivery"
@@ -62,7 +62,7 @@ const Content = () => {
               </div>
               <div className={styles.quickPoint}>
                 <Image
-                  src="/offer.png"
+                  src="/images/offer&Delivery/offer.png"
                   width={30}
                   height={30}
                   alt="offer"
@@ -72,7 +72,7 @@ const Content = () => {
               </div>
               <div className={styles.quickPoint}>
                 <Image
-                  src="/cart.png"
+                  src="/images/offer&Delivery/cart.png"
                   width={30}
                   height={30}
                   alt="cart"

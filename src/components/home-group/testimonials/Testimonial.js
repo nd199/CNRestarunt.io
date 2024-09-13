@@ -27,7 +27,7 @@ const Testimonial = () => {
               <div className={styles.boxUser}>
                 <div className={styles.boxUserAv}>
                   <Image
-                    src="/avatar1.jpg"
+                    src="/images/testimonials/avatar1.jpg"
                     width={60}
                     height={60}
                     alt="avatar"
@@ -51,7 +51,7 @@ const Testimonial = () => {
               <div className={styles.boxUser}>
                 <div className={styles.boxUserAv}>
                   <Image
-                    src="/avatar3.png"
+                    src="/images/testimonials/avatar3.png"
                     width={60}
                     height={60}
                     alt="avatar"
@@ -76,7 +76,7 @@ const Testimonial = () => {
               <div className={styles.boxUser}>
                 <div className={styles.boxUserAv}>
                   <Image
-                    src="/avatar2.jpg"
+                    src="/images/testimonials/avatar2.jpg"
                     width={60}
                     height={60}
                     alt="avatar"

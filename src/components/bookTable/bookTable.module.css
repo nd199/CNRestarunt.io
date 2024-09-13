@@ -1,0 +1,124 @@
+.page {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(80, 80, 77, 0.1);
+  padding: 20px;
+  position: relative;
+}
+.mainTitle {
+  font-size: 27px;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.container {
+  width: 590px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  gap: 30px;
+  position: absolute;
+  z-index: 1000;
+}
+
+.para {
+  width: 490px;
+  font-size: 14px;
+  font-weight: 300;
+}
+.form {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 16px;
+}
+
+.input > label {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.inputBox {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  transition: border 0.3s ease;
+  outline: none;
+}
+
+.inputBox::placeholder {
+  color: #aaa;
+}
+
+.inputBox:focus {
+  border-color: #555;
+}
+
+.personCount {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  background-color: #f67f08c1;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: li;
+}
+
+.personInput {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  transition: border 0.3s ease;
+  outline: none;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 12px;
+  display: none;
+}
+
+.input:invalid + .errorMessage {
+  display: block;
+}

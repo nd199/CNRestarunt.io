@@ -4,11 +4,14 @@ import Link from "next/link";
 import styles from "./navbar.module.css";
 import Image from "next/image";
 import { Great_Vibes } from "next/font/google";
+import { usePathname } from "next/navigation";
 
 const logoFnt = Great_Vibes({ subsets: ["latin"], weight: ["400"] });
 
 const NavBar = () => {
   const [isSticky, setIsSticky] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const getUrl = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,14 +26,23 @@ const NavBar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleBurgerClick = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <div className={`${styles.navbar} ${isSticky ? styles.sticky : ""}`}>
       <div className={styles.container}>
         <Link href="/" className={`${styles.logo} ${logoFnt.className}`}>
-          <Image src="/logo.png" width={70} height={70} alt="logo" />
+          <Image src="/images/logo.png" width={70} height={70} alt="logo" />
           <span className={styles.logoName}>Cn Restaurant.io</span>
         </Link>
-        <div className={styles.links}>
+        <div className={styles.burgerMenu} onClick={handleBurgerClick}>
+          <div className={styles.burgerLine}></div>
+          <div className={styles.burgerLine}></div>
+          <div className={styles.burgerLine}></div>
+        </div>
+        <div className={`${styles.navMenu} ${menuOpen ? styles.mobile : ""}`}>
           {[
             { id: 1, title: "Home", url: "/" },
             { id: 2, title: "About", url: "/about" },
@@ -38,19 +50,21 @@ const NavBar = () => {
             { id: 4, title: "Blog", url: "/blog" },
             { id: 5, title: "Contact", url: "/contact" },
           ].map((link) => (
-            <Link key={link.id} href={link.url} className={styles.link}>
+            <Link
+              key={link.id}
+              href={link.url}
+              className={link.url === getUrl ? styles.active : styles.link}
+            >
               {link.title}
             </Link>
           ))}
         </div>
-        <button
-          className={styles.bookTable}
-          onClick={() => {
-            console.log("Book a table clicked");
-          }}
+        <Link
+          href="/book"
+          className={getUrl == "/book" ? styles.hideButton : ""}
         >
-          Book A Table
-        </button>
+          <button className={styles.bookTable}>Book A Table</button>
+        </Link>
       </div>
     </div>
   );

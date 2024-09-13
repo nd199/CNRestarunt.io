@@ -1,8 +1,12 @@
-import React from "react";
 import styles from "./page.module.css";
+import BookTable from "@/components/bookTable/BookTable";
 
-const Portfolio = () => {
-  return <div className={styles.container}>Portfolio</div>;
+const Book = () => {
+  return (
+    <div className={styles.container}>
+      <BookTable />
+    </div>
+  );
 };
 
-export default Portfolio;
+export default Book;

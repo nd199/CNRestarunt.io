@@ -10,58 +10,18 @@
   padding: 4px;
   position: relative;
   padding-bottom: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 1s ease;
 }
 
-.categoryBoxVeg {
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  display: flex;
-  border-radius: 10% 50% 20% 20%;
-  border: 2px solid green;
-  top: 4.5px;
-  right: 4px;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
-}
-
-.categoryBoxNon {
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  display: flex;
-  border-radius: 10% 50% 20% 20%;
-  border: 2px solid red;
-  top: 4.5px;
-  right: 4px;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
-}
-
-.categoryBoxVegan {
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  display: flex;
-  border-radius: 10% 50% 20% 20%;
-  border: 2px solid #00a859;
-  top: 4.5px;
-  right: 4px;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
-}
-
+.categoryBoxVeg,
+.categoryBoxNon,
+.categoryBoxVegan,
 .categoryBoxSeaFood {
   width: 30px;
   height: 30px;
   position: absolute;
   display: flex;
   border-radius: 10% 50% 20% 20%;
-  border: 2px solid #0077b6;
   top: 4.5px;
   right: 4px;
   align-items: center;
@@ -69,38 +29,52 @@
   background-color: white;
 }
 
-.circleVeg {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: green;
+.categoryBoxVeg {
+  border: 2px solid green;
 }
 
-.circleNon {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: red;
+.categoryBoxNon {
+  border: 2px solid red;
 }
 
-.circleVegan {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: lightgreen;
+.categoryBoxVegan {
+  border: 2px solid #00a859;
 }
 
+.categoryBoxSeaFood {
+  border: 2px solid #0077b6;
+}
+
+.circleVeg,
+.circleNon,
+.circleVegan,
 .circleSeaFood {
   width: 20px;
   height: 20px;
   border-radius: 50%;
+}
+
+.circleVeg {
+  background-color: green;
+}
+
+.circleNon {
+  background-color: red;
+}
+
+.circleVegan {
+  background-color: lightgreen;
+}
+
+.circleSeaFood {
   background-color: #0077b6;
 }
 
 .container:hover {
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
   cursor: pointer;
-  transform: scale(1.1);
+  transform: scale(1.05);
+  border-color: #f64408;
 }
 
 .container > * {
@@ -128,6 +102,11 @@
   height: 100%;
   object-fit: cover;
   border-radius: inherit;
+  transition: transform 0.3s ease;
+}
+
+.image:hover {
+  transform: scale(1.1);
 }
 
 .info {
@@ -137,12 +116,14 @@
   gap: 10px;
   padding: 5px;
   width: 100%;
+  font-family: "Playfair Display", serif;
 }
 
 .itemPrice {
   font-size: 16px;
   color: #f64408;
   text-align: center;
+  font-weight: bold;
 }
 
 .itemName {
@@ -156,7 +137,7 @@
 
 .itemDesc {
   display: flex;
-  color: #aaa;
+  color: #666;
   font-weight: 300;
   font-size: 13px;
   align-items: center;
