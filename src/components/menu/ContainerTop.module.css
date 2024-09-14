@@ -19,6 +19,7 @@
   align-items: center;
   justify-content: center;
   padding: 20px;
+  text-align: center;
 }
 
 .titleWrapper {
@@ -28,11 +29,10 @@
 }
 
 .title {
-  font-size: 48px;
+  font-size: 25px;
   font-weight: 400;
   margin-bottom: 10px;
   letter-spacing: 2px;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .subtitle {
@@ -40,7 +40,6 @@
   font-weight: 300;
   margin-bottom: 20px;
   color: #000;
-  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
 }
 
 .para {
@@ -50,33 +49,9 @@
   font-weight: 300;
   text-align: center;
   line-height: 1.6;
-  animation: fadeInUp 1.2s ease-in-out;
   margin-top: 20px;
 }
 
 .para p {
   margin: 10px 0;
-}
-
-/* Animations */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }

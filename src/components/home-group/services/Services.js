@@ -13,9 +13,11 @@ const Services = () => {
   return (
     <div className={styles.page}>
       <div className={styles.container}>
-        <h1 className={(styles.title, logoFnt.className)}>
-          We also offer unique services for your events
-        </h1>
+        <div className={styles.title}>
+          <h1 className={logoFnt.className}>
+            We also offer unique services for your events
+          </h1>
+        </div>
         <div className={styles.boxes}>
           <div className={styles.box}>
             <Image

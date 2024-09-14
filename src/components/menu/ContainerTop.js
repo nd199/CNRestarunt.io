@@ -11,8 +11,10 @@ const ContainerTop = () => {
   return (
     <div className={styles.containerTop}>
       <div className={styles.overlay}>
-        <div className={`${styles.titleWrapper} ${logoFnt.className}`}>
-          <h1 className={styles.title}>Discover Exquisite Indian Flavors</h1>
+        <div className={styles.title}>
+          <h1 className={logoFnt.className}>
+            Discover Exquisite Indian Flavors
+          </h1>
           <p className={styles.subtitle}>Where Tradition Meets Modern Taste</p>
         </div>
         <div className={styles.para}>

@@ -1,13 +1,13 @@
-import React from 'react'
-import styles from './page.module.css';
-
+import React from "react";
+import styles from "./page.module.css";
+import ContactUs from "@/components/contact/ContactUs";
 
 const Contact = () => {
   return (
     <div className={styles.container}>
-      Contact
+      <ContactUs />
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

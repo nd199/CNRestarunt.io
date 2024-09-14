@@ -42,9 +42,9 @@ const Content = () => {
             </sectionRight>
           </section1>
           <section2 className={styles.section2}>
-            <p className={(styles.sec2title, logoFnt.className)}>
+            <h6 className={(styles.sec2title, logoFnt.className)}>
               Fastest Food Delivery in City
-            </p>
+            </h6>
             <p className={styles.subTitle}>
               Quick delivery across city, feel our delight taste within minutes
               at your home.
@@ -53,8 +53,8 @@ const Content = () => {
               <div className={styles.quickPoint}>
                 <Image
                   src="/images/offer&Delivery/delivery.png"
-                  width={30}
-                  height={30}
+                  width={40}
+                  height={40}
                   alt="delivery"
                   className={styles.quickIcon}
                 />
@@ -63,8 +63,8 @@ const Content = () => {
               <div className={styles.quickPoint}>
                 <Image
                   src="/images/offer&Delivery/offer.png"
-                  width={30}
-                  height={30}
+                  width={40}
+                  height={40}
                   alt="offer"
                   className={styles.quickIcon}
                 />
@@ -73,8 +73,8 @@ const Content = () => {
               <div className={styles.quickPoint}>
                 <Image
                   src="/images/offer&Delivery/cart.png"
-                  width={30}
-                  height={30}
+                  width={40}
+                  height={40}
                   alt="cart"
                   className={styles.quickIcon}
                 />

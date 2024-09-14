@@ -3,6 +3,12 @@
   padding: 0;
   margin: 0;
   transition: all 0.8s ease;
+  animation-duration: 0.5s;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 html,
@@ -10,13 +16,61 @@ body {
   max-width: 100vw;
   min-height: 100vh;
   overflow-x: hidden;
-  color: #111;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: #333;
   position: relative;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  scroll-snap-type: mandatory;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.bounce {
+  animation: bounce 1s infinite;
 }
 
 .container {
@@ -25,4 +79,26 @@ a {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

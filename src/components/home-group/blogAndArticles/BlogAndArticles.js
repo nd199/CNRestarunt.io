@@ -20,7 +20,7 @@ const BlogAndArticles = () => {
           <button className={styles.headButton}>Read All Articles</button>
         </div>
         <div className={styles.content}>
-          <section1 className={styles.section1}>
+          <div className={styles.section1}>
             <Image
               src={"/images/blog&articles/biryani.jpg"}
               width={430}
@@ -41,10 +41,10 @@ const BlogAndArticles = () => {
                 nulla dolores earum quisquam?
               </div>
             </div>
-          </section1>
-          <section2 className={styles.section2}>
-            <section2Top className={styles.section2Top}>
-              <section2TopPart1 className={styles.section2TopPart1}>
+          </div>
+          <div className={styles.section2}>
+            <div className={styles.section2Top}>
+              <div className={styles.section2TopPart1}>
                 <Image
                   src={"/images/blog&articles/burger.png"}
                   width={420}
@@ -64,8 +64,8 @@ const BlogAndArticles = () => {
                     nam nulla dolores earum quisquam?
                   </div>
                 </div>
-              </section2TopPart1>
-              <section2TopPart2 className={styles.section2TopPart2}>
+              </div>
+              <div className={styles.section2TopPart2}>
                 <Image
                   src={"/images/blog&articles/PodiIdili.jpeg"}
                   width={420}
@@ -85,10 +85,10 @@ const BlogAndArticles = () => {
                     nam nulla dolores earum quisquam?
                   </div>
                 </div>
-              </section2TopPart2>
-            </section2Top>
-            <section2Bottom className={styles.section2Bottom}>
-              <section2BottomPart1 className={styles.section2BottomPart1}>
+              </div>
+            </div>
+            <div className={styles.section2Bottom}>
+              <div className={styles.section2BottomPart1}>
                 <Image
                   src={"/images/blog&articles/Cakes.png"}
                   width={420}
@@ -108,8 +108,8 @@ const BlogAndArticles = () => {
                     nam nulla dolores earum quisquam?
                   </div>
                 </div>
-              </section2BottomPart1>
-              <section2BottomPart2 className={styles.section2BottomPart2}>
+              </div>
+              <div className={styles.section2BottomPart2}>
                 <Image
                   src={"/images/blog&articles/gulabJamun.jpg"}
                   width={420}
@@ -129,9 +129,9 @@ const BlogAndArticles = () => {
                     nam nulla dolores earum quisquam?
                   </div>
                 </div>
-              </section2BottomPart2>
-            </section2Bottom>
-          </section2>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

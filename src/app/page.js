@@ -17,7 +17,7 @@ const logoFnt = Playfair_Display({
 export default function Home() {
   return (
     <div className={styles.page}>
-      <section className={styles.section1}>
+      <div className={styles.section1}>
         <div className={styles.texts}>
           <div className={logoFnt.className}>
             <span className={styles.title}>Best food for your taste </span>
@@ -35,26 +35,22 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </section>
-
-      <section className={styles.section2}>
+      </div>
+      <div className={styles.section2}>
         <Menu />
-      </section>
-      <section className={styles.section3}>
+      </div>
+      <div className={styles.section3}>
         <AboutUs />
-      </section>
+      </div>
       <section className={styles.section4}>
         <Services />
       </section>
-      <section className={styles.section5}>
+      <div className={styles.section5}>
         <Content />
-      </section>
-      <section className={styles.section6}>
-        <Testimonial />
-      </section>
-      <section className={styles.section7}>
+      </div>
+      <div className={styles.section7}>
         <BlogAndArticles />
-      </section>
+      </div>
     </div>
   );
 }
