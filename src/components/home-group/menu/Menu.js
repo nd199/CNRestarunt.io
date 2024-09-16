@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./menu.module.css";
 import { Playfair_Display } from "next/font/google";
 import Image from "next/image";
+import Link from "next/link";
 
 const logoFnt = Playfair_Display({
   subsets: ["latin-ext"],
@@ -29,7 +30,9 @@ const Menu = () => {
             <p className={styles.boxText}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit,
             </p>
-            <h5>Explore Menu</h5>
+            <Link href={'/menu'}>
+              <h5 className={styles.explore}>Explore Menu</h5>
+            </Link>
           </div>
           <div className={styles.box}>
             <div className={styles.iconShadow}>
@@ -45,7 +48,9 @@ const Menu = () => {
             <p className={styles.boxText}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit,
             </p>
-            <h5>Explore Menu</h5>
+            <Link href={'/menu'}>
+              <h5 className={styles.explore}>Explore Menu</h5>
+            </Link>
           </div>
           <div className={styles.box}>
             <div className={styles.iconShadow}>
@@ -61,7 +66,9 @@ const Menu = () => {
             <p className={styles.boxText}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit,
             </p>
-            <h5>Explore Menu</h5>
+            <Link href={'/menu'}>
+              <h5 className={styles.explore}>Explore Menu</h5>
+            </Link>
           </div>
           <div className={styles.box}>
             <div className={styles.iconShadow}>
@@ -77,7 +84,9 @@ const Menu = () => {
             <p className={styles.boxText}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit,
             </p>
-            <h5>Explore Menu</h5>
+            <Link href={"/menu"}>
+              <h5 className={styles.explore}>Explore Menu</h5>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,28 +1,39 @@
-import React from "react";
-import styles from "./page.module.css"; // Import the CSS module
+"use client";
+import React, { useState } from "react";
+import styles from "./page.module.css";
 import Image from "next/image";
+import { articles, months, years } from "@/utils/Utils";
 
 const BlogArticles = () => {
-  const articles = [
-    {
-      id: 1,
-      title: "How to prepare a delicious gluten free sushi",
-      date: "January 3, 2023",
-      imgSrc: "ChickenRoast.jpg",
-    },
-    {
-      id: 2,
-      title: "Exclusive baking lessons from the pastry king",
-      date: "January 3, 2023",
-      imgSrc: "jpg",
-    },
-    {
-      id: 3,
-      title: "How to prepare the perfect fries in an air fryer",
-      date: "January 3, 2023",
-      imgSrc: "/path-to-image3.jpg",
-    },
-  ];
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedMonth, setSelectedMonth] = useState("");
+  const [selectedYear, setSelectedYear] = useState("");
+
+  const handleSearchChange = (e) => {
+    setSearchTerm(e.target.value.toLowerCase());
+  };
+
+  const handleMonthChange = (e) => {
+    setSelectedMonth(e.target.value);
+  };
+
+  const handleYearChange = (e) => {
+    setSelectedYear(e.target.value);
+  };
+
+  const filteredArticles = articles.filter((article) => {
+    const articleDate = new Date(article.date);
+    const articleMonth = articleDate.toLocaleString("default", {
+      month: "long",
+    });
+    const articleYear = articleDate.getFullYear().toString();
+
+    return (
+      article.title.toLowerCase().includes(searchTerm) &&
+      (!selectedMonth || articleMonth === selectedMonth) &&
+      (!selectedYear || articleYear === selectedYear)
+    );
+  });
 
   return (
     <div className={styles.blogContainer}>
@@ -33,22 +44,78 @@ const BlogArticles = () => {
           need to change to create a truly happens.
         </p>
       </div>
+      <hr className={styles.divider} />
+      <nav className={styles.navbar}>
+        <div className={styles.navLeft}>
+          <label className={styles.filterLabel} htmlFor="search">
+            Search By Name:
+          </label>
+          <input
+            type="text"
+            className={styles.searchInput}
+            placeholder="Search Articles"
+            value={searchTerm}
+            onChange={handleSearchChange}
+          />
+        </div>
+        <div className={styles.navRight}>
+          <label className={styles.filterLabel} htmlFor="month">
+            Filter by Month:
+          </label>
+          <select
+            id="month"
+            className={styles.filterSelect}
+            value={selectedMonth}
+            onChange={handleMonthChange}
+          >
+            <option value="">Select Month</option>
+            {months.map((month, index) => (
+              <option key={index} value={month}>
+                {month}
+              </option>
+            ))}
+          </select>
 
+          <label className={styles.filterLabel} htmlFor="year">
+            Filter by Year:
+          </label>
+          <select
+            id="year"
+            className={styles.filterSelect}
+            value={selectedYear}
+            onChange={handleYearChange}
+          >
+            <option value="">Select Year</option>
+            {years.map((year, index) => (
+              <option key={index} value={year}>
+                {year}
+              </option>
+            ))}
+          </select>
+        </div>
+      </nav>
       <div className={styles.articlesGrid}>
-        {articles.map((article) => (
-          <div className={styles.articleCard} key={article.id}>
-            <Image
-              src={`/images/menu/${article.imgSrc}`}
-              width={300}
-              height={300}
-              alt={article.title}
-            />
-            <div className={styles.articleInfo}>
-              <p>{article.date}</p>
-              <h3>{article.title}</h3>
+        {filteredArticles.length > 0 ? (
+          filteredArticles.map((article) => (
+            <div className={styles.articleCard} key={article.id}>
+              <Image
+                src={`/images/articleImage/${article.imgSrc}`}
+                width={300}
+                height={600}
+                className={styles.articleImg}
+                alt={article.title}
+              />
+              <div className={styles.articleInfo}>
+                <p>{article.date}</p>
+                <h3>{article.title}</h3>
+                <p>{article.Desc}</p>
+                <button className={styles.readMore}>Read More</button>
+              </div>
             </div>
-          </div>
-        ))}
+          ))
+        ) : (
+          <p>No articles found</p>
+        )}
       </div>
     </div>
   );
