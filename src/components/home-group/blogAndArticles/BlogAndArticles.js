@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./ba.module.css";
 import { Playfair_Display } from "next/font/google";
 import React from "react";
+import Link from "next/link";
 
 const logoFnt = Playfair_Display({
   subsets: ["latin-ext"],
@@ -14,10 +15,12 @@ const BlogAndArticles = () => {
     <div className={styles.page}>
       <div className={styles.container}>
         <div className={styles.heading}>
-          <div className={(styles.pageTitle, logoFnt.className)}>
-            <h1 className={styles.title}>Our Blog & Articles</h1>
+          <div className={(styles.pageTitle, styles.title)}>
+            <h1 className={logoFnt.className}>Our Blog & Articles</h1>
           </div>
-          <button className={styles.headButton}>Read All Articles</button>
+          <Link href="/blog">
+            <button className={styles.headButton}>Read All Articles</button>
+          </Link>
         </div>
         <div className={styles.content}>
           <div className={styles.section1}>

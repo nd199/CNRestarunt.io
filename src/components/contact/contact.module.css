@@ -115,7 +115,7 @@
 
 .contactInfo {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Changed to column for better stacking on smaller screens */
   justify-content: space-between;
   padding: 20px;
   background-color: #f9f9f9;
@@ -140,4 +140,106 @@
   font-size: 0.95rem;
   color: #5a5a5a;
   margin-bottom: 8px;
+}
+
+/* Tablet view */
+@media screen and (max-width: 1024px) {
+  .contentWrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .inputs {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  .mainTitle h1 {
+    font-size: 2rem;
+  }
+
+  .contactInfo{
+    flex-direction: row;
+  }
+
+  .btn {
+    padding: 10px 0;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile view */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .mainTitle h1 {
+    font-size: 1.8rem;
+  }
+
+  .contentWrapper {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .inputs {
+    grid-template-columns: 1fr;
+  }
+
+  .inputBox,
+  .textareaBox {
+    font-size: 0.85rem;
+  }
+
+  .btn {
+    padding: 10px 0;
+    font-size: 0.85rem;
+  }
+
+  .phoneNumber {
+    font-size: 1.2rem;
+  }
+
+  .contactInfo h3 {
+    font-size: 1rem;
+  }
+
+  .contactInfo p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile small view */
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+
+  .mainTitle h1 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    padding: 8px 0;
+    font-size: 0.8rem;
+  }
+
+  .contactInfo{
+    flex-wrap: wrap;
+  }
+
+  .phoneNumber {
+    font-size: 1rem;
+  }
+
+  .contactInfo h3 {
+    font-size: 0.9rem;
+  }
+
+  .contactInfo p {
+    font-size: 0.85rem;
+  }
 }

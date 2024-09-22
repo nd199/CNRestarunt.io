@@ -121,3 +121,69 @@
 .input:invalid + .errorMessage {
   display: block;
 }
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 70%;
+    padding: 20px;
+  }
+
+  .para {
+    width: 100%;
+    font-size: 13px;
+  }
+
+  .form {
+    padding: 20px 30px;
+  }
+
+  .inputs {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 20px;
+    position: static;
+  }
+
+  .para {
+    width: 100%;
+  }
+
+  .inputs {
+    grid-template-columns: 1fr;
+  }
+
+  .form {
+    padding: 20px 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .mainTitle {
+    font-size: 22px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .para {
+    font-size: 13px;
+  }
+
+  .form {
+    padding: 15px;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+}

@@ -19,8 +19,8 @@ export default function Home() {
     <div className={styles.page}>
       <div className={styles.section1}>
         <div className={styles.texts}>
-          <div className={logoFnt.className}>
-            <span className={styles.title}>Best food for your taste </span>
+          <div className={styles.title}>
+            <h1 className={logoFnt.className}>Best food for your taste </h1>
           </div>
           <p className={styles.subTitle}>
             Discover delectable cuisine and unforgettable moments in our
