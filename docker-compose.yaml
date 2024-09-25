@@ -1,0 +1,21 @@
+services:
+  db:
+    container_name: postgres-cnr
+    image: postgres:15
+    ports:
+      - "5448:5432"
+    environment:
+      POSTGRES_USER: codeNaren
+      POSTGRES_PASSWORD: password
+      PG_DATA: /data/restaurant
+    volumes:
+      - db:/data/restaurant
+    networks:
+      - db
+    restart: unless-stopped
+
+volumes:
+  db:
+networks:
+  db:
+    driver: bridge
