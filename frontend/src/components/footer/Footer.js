@@ -9,7 +9,7 @@ const logoFnt = Great_Vibes({ subsets: ["latin"], weight: ["400"] });
 const Footer = () => {
   return (
     <div className={styles.footerContainer}>
-      <section className={styles.footerFull}>
+      <div className={styles.footerFull}>
         <div className={styles.leftFooter}>
           <Link href="/" className={`${styles.logo} ${logoFnt.className}`}>
             <Image src="/images/logo.png" width={70} height={70} alt="logo" />
@@ -63,7 +63,7 @@ const Footer = () => {
           </div>
         </div>
         <div className={styles.rightFooter}></div>
-      </section>
+      </div>
       <div className={styles.footerBottom}>
         @2024 CodeNaren.io. All rights reserved.
       </div>

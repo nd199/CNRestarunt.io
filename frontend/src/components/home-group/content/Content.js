@@ -15,7 +15,7 @@ const Content = () => {
       <div className={styles.container}>
         <section className={styles.section}>
           <section1 className={styles.section1}>
-            <sectionLeft>
+            <div>
               <Image
                 src={"/images/offer&Delivery/CookTogether.jpeg"}
                 width={331}
@@ -23,8 +23,8 @@ const Content = () => {
                 alt="main"
                 className={styles.Image}
               />
-            </sectionLeft>
-            <sectionRight>
+            </div>
+            <div>
               <Image
                 src={"/images/offer&Delivery/NonVeg.jpeg"}
                 width={240}
@@ -39,7 +39,7 @@ const Content = () => {
                 alt="side2"
                 className={styles.Image}
               />
-            </sectionRight>
+            </div>
           </section1>
           <section2 className={styles.section2}>
             <h6 className={(styles.sec2title, logoFnt.className)}>
