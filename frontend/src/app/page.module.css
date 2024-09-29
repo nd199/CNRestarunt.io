@@ -1,16 +1,18 @@
 .page {
-  width: 100%;
+    width: 100%;
+    position: relative;
 }
 
 .section1 {
-  height: calc(100vh - 80px);
-  background-image: url("/images/home.png");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    height: calc(100vh - 80px);
+    background-image: url("/images/home.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 
 .section2,
 .section3,
@@ -18,58 +20,98 @@
 .section5,
 .section6,
 .section7 {
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .texts {
-  width: 467px;
-  height: 392px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  text-align: center;
+    width: 467px;
+    height: 392px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
 }
 
 .title {
-  font-size: 35px;
-  line-height: normal;
+    font-size: 35px;
+    line-height: normal;
 }
 
 .subTitle {
-  font-size: 15px;
-  font-weight: 300;
+    font-size: 15px;
+    font-weight: 300;
 }
 
 .buttons {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  border: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: none;
 }
 
 .button,
 .btn {
-  border: none;
-  padding: 15px;
-  border: 1px solid black;
-  border-radius: 20px;
-  cursor: pointer;
-  background-color: black;
-  color: white;
+    border: none;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
 }
 
 .button:hover,
 .btn:hover {
-  border: 1px solid rgb(0, 103, 5);
-  transform: scale(1.1);
+    border: 1px solid rgb(0, 103, 5);
+    transform: scale(1.1);
 }
 
 .button {
-  background-color: rgb(240, 103, 5);
-  border: none;
+    background-color: rgb(240, 103, 5);
+    border: none;
+}
+
+.mobileScreenRight {
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    .mobileScreenRight {
+        width: 250px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        background-color: rgba(0, 0, 0, 0.93);
+        position: fixed;
+        color: #fff;
+        top: 95px;
+        right: 0;
+        z-index: 1000;
+        padding: 10px;
+        box-sizing: border-box;
+        flex-direction: column;
+        list-style: none;
+        animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .sideNavLinks {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .sideNavLink:hover {
+        cursor: pointer;
+    }
+
 }

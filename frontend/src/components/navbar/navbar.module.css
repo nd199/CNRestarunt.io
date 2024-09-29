@@ -1,171 +1,230 @@
 .navbar {
-  width: 100%;
-  background-color: rgba(0, 0, 0);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 1001;
-}
-.navbar.sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    background-color: rgba(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1001;
 }
 
+.navbar.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
 .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1100px;
-  padding: 0 10px;
-  height: 80px;
-  color: black;
-  box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1100px;
+    padding: 10px 10px;
+    height: 100px;
+    color: black;
+    box-sizing: border-box;
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: white;
 }
 
 .logoName {
-  font-style: italic;
-  font-size: 40px;
-  color: #fff;
-  margin-left: 10px;
+    font-style: italic;
+    font-size: 40px;
+    color: #fff;
+    margin-left: 10px;
 }
 
 .links {
-  display: flex;
-  align-items: center;
-  gap: 30px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
 }
 
 .link {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
 }
 
 .link:hover {
-  padding: 10px;
-  border-radius: 18px;
-  background: #d6f570de;
+    padding: 10px;
+    border-radius: 18px;
+    background: #d6f570de;
 }
 
 .active {
-  padding: 10px;
-  border-radius: 18px;
-  background: #d6f570de;
+    padding: 10px;
+    border-radius: 18px;
+    background: #d6f570de;
 }
 
 .bookTable {
-  padding: 10px 20px;
-  border: 1px solid black;
-  color: black;
-  cursor: pointer;
-  font-size: 15px;
-  border-radius: 22px;
-  background: #e55c0cf6;
-  color: white;
-  font-weight: bold;
+    padding: 10px 20px;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 22px;
+    background: #e55c0cf6;
+    color: white;
+    font-weight: bold;
 }
 
 .bookTable:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .burgerMenu {
-  display: none;
-  cursor: pointer;
+    display: none;
+    cursor: pointer;
 }
 
 .burgerLine {
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  margin: 5px 0;
-  transition: 0.3s;
+    width: 25px;
+    height: 2px;
+    border-radius: 10px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.3s;
 }
 
 .burgerMenu.active .burgerLine:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 6px);
+    transform: rotate(45deg) translate(5px, 6px);
 }
 
 .burgerMenu.active .burgerLine:nth-child(2) {
-  opacity: 0;
+    opacity: 0;
 }
 
 .burgerMenu.active .burgerLine:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
+    transform: rotate(-45deg) translate(6px, -6px);
 }
 
 .navMenu {
-  display: flex;
-  align-items: center;
-  gap: 30px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
 }
 
 .navMenu.mobile {
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  top: 80px;
-  right: 10px;
-  background-color: rgba(0, 0, 0, 0.8);
-  width: 200px;
-  border-radius: 8px;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 200px;
+    border-radius: 8px;
 }
 
 .navMenu.mobile.active {
-  display: flex;
+    display: flex;
 }
 
 .navMenu.mobile .link {
-  padding: 15px;
-  font-size: 18px;
+    padding: 15px;
+    font-size: 18px;
 }
 
 .navMenu.mobile .link:hover {
-  background: #d6f570de;
+    background: #d6f570de;
 }
 
 .hideButton {
-  display: none;
+    display: none;
+}
+
+.logoLottie {
+    width: 120px !important;
+    height: 120px !important;
+    object-fit: cover;
 }
 
 @media screen and (max-width: 980px) {
-  .logoName {
-    font-size: 30px;
-  }
-  .bookTable {
-    width: 120px;
-    height: 45px;
-    font-size: 12.5px;
-  }
+    .logoName {
+        font-size: 30px;
+    }
+
+    .bookTable {
+        width: 120px;
+        height: 45px;
+        font-size: 12.5px;
+    }
 }
 
 @media screen and (max-width: 900px) {
-  .links {
-    display: none;
-  }
+    .link,
+    .active {
+        display: none;
+    }
 
-  .burgerMenu {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
+    .mobileLeft {
+        display: flex;
+        justify-content: space-around;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .burgerMenu {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+    }
+
+    .activeBurger .burgerLine:first-child {
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+
+    .activeBurger .burgerLine:nth-child(2) {
+        opacity: 0;
+    }
+
+    .activeBurger .burgerLine:last-child {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+}
+
+@media (max-width: 571px) {
+    .logoName {
+        font-size: 27px;
+    }
+
+    .logoLottie {
+        display: none;
+    }
 }
 
 @media (max-width: 480px) {
-  .logoName {
-    font-size: 30px;
-  }
+    .logoName {
+        font-size: 23px;
+    }
+
+    .burgerLine {
+        width: 20px;
+    }
+
+    .navbar {
+        padding: 0 10px;
+    }
+
+    .bookTable {
+        width: 100px;
+        height: 40px;
+        text-align: center;
+        font-size: 10px;
+        padding: 2px;
+    }
 }

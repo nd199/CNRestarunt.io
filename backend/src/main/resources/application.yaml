@@ -1,7 +1,7 @@
 spring:
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: updatechr
     properties:
       hibernate:
         show_sql: true
