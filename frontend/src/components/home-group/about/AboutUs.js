@@ -15,8 +15,8 @@ const AboutUs = () => {
   return (
     <div className={styles.page}>
       <h1 className={(styles.title, logoFnt.className)}>About Us</h1>
-      <section className={styles.sec}>
-        <section1 className={styles.section}>
+      <div className={styles.sec}>
+        <div className={styles.section}>
           <div className={styles.videoSection}>
             <video className={styles.video} autoPlay muted loop>
               <source src="videos/AboutVideo.mp4" type="video/mp4" />
@@ -37,8 +37,8 @@ const AboutUs = () => {
               </p>
             </div>
           </div>
-        </section1>
-        <section2 className={styles.section}>
+        </div>
+        <div className={(styles.section, styles.sectionDesc)}>
           <h5 className={(logoFnt.className, styles.title2)}>
             We provide healthy food for your family.
           </h5>
@@ -56,8 +56,8 @@ const AboutUs = () => {
           <button className={styles.MoreButton}>
             <Link href="/about">More about Us</Link>
           </button>
-        </section2>
-      </section>
+        </div>
+      </div>
     </div>
   );
 };

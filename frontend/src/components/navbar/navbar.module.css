@@ -149,6 +149,21 @@
     object-fit: cover;
 }
 
+.mobileScreenRight {
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    background-color: black;
+}
+
+.sideNavLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+}
+
 @media screen and (max-width: 980px) {
     .logoName {
         font-size: 30px;
@@ -185,7 +200,7 @@
     }
 
     .activeBurger .burgerLine:first-child {
-        transform: rotate(45deg) translate(7px, 7px);
+        transform: rotate(45deg) translate(3px, 4px);
     }
 
     .activeBurger .burgerLine:nth-child(2) {
@@ -193,7 +208,43 @@
     }
 
     .activeBurger .burgerLine:last-child {
-        transform: rotate(-45deg) translate(6px, -6px);
+        transform: rotate(-45deg) translate(3px, -4px);
+    }
+
+    @media screen and (max-width: 900px) {
+        .mobileScreenRight {
+            width: 250px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            background-color: rgba(0, 0, 0, 0.93);
+            position: fixed;
+            color: #fff;
+            top: 95px;
+            right: 0;
+            z-index: 1000;
+            padding: 10px;
+            box-sizing: border-box;
+            flex-direction: column;
+            list-style: none;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+    
+        .sideNavLinks {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 30px;
+        }
+    
+        .sideNavLink:hover {
+            cursor: pointer;
+        }
+    
     }
 }
 

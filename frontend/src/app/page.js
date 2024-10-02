@@ -18,17 +18,6 @@ export default function Home({ mobileMenuOpen }) {
     return (
         <div className={styles.page}>
             <div className={styles.section1}>
-                {mobileMenuOpen && (
-                    <div className={styles.mobileScreenRight}>
-                        <ul className={styles.sideNavLinks}>
-                            <li className={styles.sideNavLink}>Home</li>
-                            <li className={styles.sideNavLink}>About</li>
-                            <li className={styles.sideNavLink}>Menu</li>
-                            <li className={styles.sideNavLink}>Blog</li>
-                            <li className={styles.sideNavLink}>Contact</li>
-                        </ul>
-                    </div>
-                )}
                 <div className={styles.texts}>
                     <div className={styles.title}>
                         <h1 className={logoFnt.className}>Best food for your taste</h1>
