@@ -2,6 +2,9 @@
   width: 100vw;
   height: calc(100vh - 80px);
   background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .Image {
@@ -9,6 +12,7 @@
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   transform: scale(0.9);
+  transition: transform 0.3s ease;
 }
 
 .Image:hover {
@@ -16,25 +20,24 @@
 }
 
 .container {
-  width: 1246px;
-  height: 650px;
+  width: 100%;
+  max-width: 1246px;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 64px;
-  gap: 64px;
+  justify-content: center;
+  gap: 32px;
 }
 
 .section {
-  width: 1246px;
-  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 64px;
-  gap: 64px;
+  padding: 32px;
+  gap: 32px;
 }
 
 .section1 {
@@ -42,11 +45,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
-}
-
-.section1 > * {
-  flex: 1;
+  gap: 16px;
 }
 
 .section2 {
@@ -54,35 +53,159 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between;
-  gap: 30px;
+  justify-content: center;
+  gap: 16px;
 }
 
 .quickPoints {
   display: flex;
-  align-items: flex-start;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 16px;
 }
 
 .quickPoint {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 10px;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .quickIcon {
-  margin: 20px;
+  width: 40px;
+  height: 40px;
 }
 
 .section2 {
-  font-size: 55px;
+  font-size: 36px;
 }
 
 .subTitle {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 300;
+  line-height: 1.5;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 90%;
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .section {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .section > * {
+    flex: 1;
+  }
+
+  .section1 {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .section2 {
+    font-size: 28px;
+  }
+
+  .sec2title {
+    font-size: 28px;
+  }
+
+  .subTitle {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .section {
+    padding: 12px;
+  }
+
+  .section2 {
+    font-size: 22px;
+  }
+
+  .subTitle {
+    font-size: 12px;
+  }
+
+  .quickPoint {
+    font-size: 12px;
+  }
+
+  .Image2 {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    height: auto;
+  }
+
+  .container {
+    padding: 8px;
+    gap: 6px;
+    flex-direction: column;
+  }
+
+  .section {
+    padding: 8px;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .section2 {
+    font-size: 20px;
+  }
+
+  .subTitle {
+    font-size: 10px;
+  }
+
+  .quickPoint {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    padding: 4px;
+    gap: 4px;
+  }
+
+  .Image{
+    height: 30% !important;
+  }
+
+  .sec2title{
+    font-size: 18px;
+  }
+
+  .section {
+    padding: 4px;
+  }
+
+  .section2 {
+    font-size: 18px;
+  }
+
+  .subTitle {
+    font-size: 8px;
+  }
+
+  .quickPoint {
+    font-size: 8px;
+  }
 }

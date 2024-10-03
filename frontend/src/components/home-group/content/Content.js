@@ -13,8 +13,8 @@ const Content = () => {
   return (
     <div className={styles.page}>
       <div className={styles.container}>
-        <section className={styles.section}>
-          <section1 className={styles.section1}>
+        <div className={styles.section}>
+          <div className={styles.section1}>
             <div>
               <Image
                 src={"/images/offer&Delivery/CookTogether.jpeg"}
@@ -30,19 +30,19 @@ const Content = () => {
                 width={240}
                 height={240}
                 alt="side1"
-                className={styles.Image}
+                className={(styles.Image, styles.Image2)}
               />
               <Image
                 src={"/images/offer&Delivery/veg.jpeg"}
                 width={240}
                 height={250}
                 alt="side2"
-                className={styles.Image}
+                className={(styles.Image, styles.Image2)}
               />
             </div>
-          </section1>
-          <section2 className={styles.section2}>
-            <h6 className={(styles.sec2title, logoFnt.className)}>
+          </div>
+          <div className={styles.section2}>
+            <h6 className={`${styles.sec2title} ${logoFnt.className}`}>
               Fastest Food Delivery in City
             </h6>
             <p className={styles.subTitle}>
@@ -81,8 +81,8 @@ const Content = () => {
                 <p>Online Services Available</p>
               </div>
             </div>
-          </section2>
-        </section>
+          </div>
+        </div>
       </div>
     </div>
   );
