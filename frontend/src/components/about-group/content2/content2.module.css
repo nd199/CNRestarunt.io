@@ -7,6 +7,10 @@
   justify-content: center;
 }
 
+.title {
+  font-family: "Playfair Display";
+}
+
 .container {
   width: 1246px;
   height: 650px;
@@ -29,6 +33,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 30px;
+  height: auto;
 }
 
 .circle {
@@ -75,6 +80,8 @@
   .circles {
     flex-wrap: wrap;
     gap: 20px;
+    height: auto;
+    padding: 5px;
     justify-content: center;
   }
 

@@ -13,8 +13,8 @@ const Testimonial = () => {
   return (
     <div className={styles.page}>
       <div className={styles.container}>
-        <h1 className={logoFnt.className}>What Our Customers Say...</h1>
-        <section>
+        <h1 className={styles.title}>What Our Customers Say...</h1>
+        <div>
           <div className={styles.boxes}>
             <div className={styles.box}>
               <div className={styles.boxHeading}>“The best restaurant”</div>
@@ -90,7 +90,7 @@ const Testimonial = () => {
               </div>
             </div>
           </div>
-        </section>
+        </div>
       </div>
     </div>
   );

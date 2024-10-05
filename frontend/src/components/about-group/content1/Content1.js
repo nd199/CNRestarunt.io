@@ -14,7 +14,7 @@ const Content1 = () => {
       <div className={styles.section}>
         <div className={styles.section1}>
           <div className={styles.section1Top}>
-            <h1 className={(logoFnt.className, styles.title)}>
+            <h1 className={styles.title}>
               A little information for our valuable guest
             </h1>
             <p className={styles.para}>

@@ -1,5 +1,5 @@
 .page {
-  height: 870px;
+  height: calc(100vh - 80px);
   background-position: center;
   background-size: cover;
   display: flex;
@@ -22,6 +22,7 @@
 }
 
 .title {
+  font-family: "Playfair Display";
   font-size: 48px;
 }
 
@@ -90,4 +91,58 @@
   font-size: 14px;
   color: #777;
   font-weight: 400;
+}
+
+@media screen and (max-width: 1024px) {
+  .page {
+    padding: 0 20px;
+  }
+
+  .box {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .boxes {
+    width: 100vw;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    gap: 10px;
+  }
+
+  .box {
+    padding: 10px 0px;
+    width: 50%;
+  }
+
+  .box > * {
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .page {
+    height: auto;
+  }
+
+  .container {
+    height: auto;
+  }
+
+  .box {
+    width: auto;
+  }
+
+  .title {
+    font-weight: 400;
+    font-size: 28px;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .box {
+    width: 100%;
+  }
 }

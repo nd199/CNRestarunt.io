@@ -23,13 +23,20 @@ const Dashboard = () => {
 
   return (
     <div className={styles.page}>
-      <ContainerTop />
-      <ContainerMiddle handleType={handleType} />
-      <ContainerBottom handleCategory={handleCategory} />
-      <div className={styles.items}>
-        {filteredItems.map((item) => (
-          <ItemCard key={item.id} item={item} />
-        ))}
+      <div className={styles.head}>
+        <ContainerTop />
+      </div>
+      <div className={styles.content}>
+        <div className={styles.filters}>
+          <ContainerMiddle handleType={handleType} />
+          <ContainerBottom handleCategory={handleCategory} />
+        </div>
+        <hr className={styles.underline} />
+        <div className={styles.items}>
+          {filteredItems.map((item) => (
+            <ItemCard key={item.id} item={item} />
+          ))}
+        </div>
       </div>
     </div>
   );

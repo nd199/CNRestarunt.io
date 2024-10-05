@@ -3,9 +3,7 @@ import styles from "./ContainerBottom.module.css";
 const ContainerBottom = ({ handleCategory }) => {
   return (
     <div className={styles.containerBottom}>
-      <h2 className={styles.need}>
-        Choose Your Type - (Veg, Non-veg, Vegan, Sea Food)
-      </h2>
+      <h2 className={styles.need}>Choose Your Type</h2>
       <div className={styles.filter}>
         <select
           className={styles.select}

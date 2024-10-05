@@ -18,13 +18,11 @@ const ContainerTop = () => {
           <p className={styles.subtitle}>Where Tradition Meets Modern Taste</p>
         </div>
         <div className={styles.para}>
-          <p>
-            <strong>
-              Welcome to CN_Restaurant.io, where we bring the rich, vibrant
-              flavors of India to your table.
-            </strong>
+          <p className={styles.para1}>
+            Welcome to CN_Restaurant.io, where we bring the rich, vibrant
+            flavors of India to your table.
           </p>
-          <p>
+          <p className={styles.para2}>
             Indulge in a diverse array of dishes prepared with passion,
             precision, and the freshest ingredients. Join us for an
             unforgettable dining experience that blends tradition with a modern

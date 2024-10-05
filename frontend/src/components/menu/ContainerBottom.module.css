@@ -63,3 +63,16 @@
     transform: translateY(0);
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .containerBottom {
+    padding: 10px;
+    gap: 0px;
+  }
+
+  .need {
+    width: auto;
+    flex-wrap: wrap;
+    font-size: 18px;
+  }
+}

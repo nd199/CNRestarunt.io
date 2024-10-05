@@ -120,6 +120,10 @@
 }
 
 .itemPrice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   font-size: 16px;
   color: #f64408;
   text-align: center;
@@ -146,4 +150,68 @@
   flex-direction: column;
   text-align: center;
   padding: 5px;
+}
+
+@media screen and (max-width: 425px) {
+  .container {
+    width: 130px;
+    gap: 2px;
+    padding: 0;
+    justify-content: space-around;
+  }
+
+  .info {
+    gap: 2px;
+    padding: 0;
+  }
+
+  .itemPrice > * {
+    margin-bottom: 5px;
+  }
+
+  .itemName > * {
+    font-size: 14px;
+    font-weight: 600;
+    margin: auto;
+    margin-bottom: 5px;
+  }
+
+  .itemDesc > * {
+    margin-bottom: 5px;
+  }
+
+  .itemImage {
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .container {
+    width: 130px;
+    gap: 2px;
+    padding: 0;
+    justify-content: space-around;
+  }
+
+  .info {
+    gap: 2px;
+    padding: 0;
+  }
+
+  .itemPrice > * {
+    margin: auto;
+    margin-bottom: 5px;
+  }
+
+  .itemName > * {
+    margin-bottom: 5px;
+  }
+
+  .itemDesc > * {
+    margin-bottom: 5px;
+  }
+
+  .itemImage {
+    height: 100px;
+  }
 }
