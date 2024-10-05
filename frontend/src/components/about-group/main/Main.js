@@ -16,8 +16,8 @@ const Main = () => {
       <h1 className={logoFnt.className}>
         Cn Restaurant.io: A Taste of India, Elevated{" "}
       </h1>
-      <section className={styles.sec}>
-        <section1 className={styles.section}>
+      <div className={styles.sec}>
+        <div className={styles.section}>
           <div className={styles.videoSection}>
             <video className={styles.video} autoPlay muted loop>
               <source src="/videos/about2.mp4" type="video/mp4" />
@@ -38,8 +38,8 @@ const Main = () => {
               </p>
             </div>
           </div>
-        </section1>
-        <section2 className={styles.section}>
+        </div>
+        <div className={styles.section}>
           <p className={styles.p1}>
             At Cn Restaurant.io, we take pride in offering wholesome, delicious
             meals for your family, inspired by the rich culinary traditions of
@@ -57,8 +57,8 @@ const Main = () => {
             hosting a special event, we’re here to make your dining experience
             exceptional from start to finish.
           </p>
-        </section2>
-      </section>
+        </div>
+      </div>
     </div>
   );
 };

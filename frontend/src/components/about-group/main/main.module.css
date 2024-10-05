@@ -1,7 +1,7 @@
 /* General Styles */
 .page {
   max-width: 1457px;
-  height: 790px;
+  height: calc(100vh - 80px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,7 +48,7 @@
 }
 
 .title2 {
-  font-size: 30px; /* Corrected to a single font-size property */
+  font-size: 30px;
   font-weight: 300;
 }
 
@@ -198,9 +198,20 @@
   }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
+  .page {
+    justify-content: space-around;
+    height: auto;
+    margin: 0;
+  }
+
+  .title {
+    margin-top: 900px;
+    margin-bottom: 0;
+  }
+
   .sec {
-    gap: 40px;
+    margin-top: 50px;
   }
 
   .section {
@@ -223,11 +234,11 @@
   }
 
   .overlay {
-    width: 90%;
-    height: auto;
-    bottom: -120px;
-    right: -30px;
-    padding: 25px;
+    display: none;
+  }
+
+  .video{
+    margin-bottom: 30px;
   }
 
   .overlayTitle {
@@ -236,5 +247,54 @@
 
   .overlaySubtitle {
     font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .page {
+    width: 90vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    gap: 40px;
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .overlay {
+    display: none;
+  }
+
+  .overlayTitle {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .sec {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .page {
+    width: 90vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    gap: 40px;
+    padding: 20px;
+  }
+
+  .sec {
+    margin: 0;
+  }
+
+  .overlay {
+    display: none;
   }
 }

@@ -13,8 +13,8 @@ const Content2 = () => {
   return (
     <div className={styles.page}>
       <div className={styles.container}>
-        <h1 className={logoFnt.className}>Our Partners :)</h1>
-        <div>
+        <h1 className={(logoFnt.className, styles.title)}>Our Partners :)</h1>
+        <div className={styles.circlesContainer}>
           <div className={styles.circles}>
             <div className={styles.circle}>
               <div className={styles.circleUserAv}>

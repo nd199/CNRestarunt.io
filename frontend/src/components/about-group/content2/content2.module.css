@@ -17,7 +17,6 @@
   padding: 64px;
   gap: 64px;
   text-align: center;
-
   border: 1px solid #ddd;
   border-radius: 2px;
 }
@@ -63,4 +62,49 @@
   height: 100%;
   border-radius: 50%;
   border: none;
+}
+
+/* Media query for screen sizes between 1440px and 360px */
+@media screen and (max-width: 1440px) and (min-width: 360px) {
+  .container {
+    width: 100%;
+    padding: 32px;
+    gap: 32px;
+  }
+
+  .circles {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .circle {
+    width: 160px;
+    height: 160px;
+    padding: 5px;
+  }
+
+  .circleUserAv {
+    padding: 5px;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .circle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
 }
