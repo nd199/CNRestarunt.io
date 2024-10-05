@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import styles from "./page.module.css";
 import ItemCard from "@/components/menu/ItemCard";
-import { items } from "@/utils/Utils";
+import { useMenuItems } from "@/utils/Utils";
 import ContainerTop from "@/components/menu/ContainerTop";
 import ContainerMiddle from "@/components/menu/ContainerMiddle";
 import ContainerBottom from "@/components/menu/ContainerBottom";
@@ -13,6 +13,7 @@ const Dashboard = () => {
 
   const handleCategory = (category) => setCategory(category);
   const handleType = (type) => setType(type);
+  const items = useMenuItems();
 
   const filteredItems = items.filter((item) => {
     const matchCategory =

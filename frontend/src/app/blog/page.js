@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
 import Image from "next/image";
 import { articles, months, years } from "@/utils/Utils";
@@ -8,6 +9,7 @@ const BlogArticles = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedMonth, setSelectedMonth] = useState("");
   const [selectedYear, setSelectedYear] = useState("");
+  const router = useRouter();
 
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value.toLowerCase());
@@ -19,6 +21,10 @@ const BlogArticles = () => {
 
   const handleYearChange = (e) => {
     setSelectedYear(e.target.value);
+  };
+
+  const handleBlog = (id) => {
+    router.push(`/blog/${id}`);
   };
 
   const filteredArticles = articles.filter((article) => {
@@ -59,39 +65,42 @@ const BlogArticles = () => {
           />
         </div>
         <div className={styles.navRight}>
-          <label className={styles.filterLabel} htmlFor="month">
-            Filter by Month:
-          </label>
-          <select
-            id="month"
-            className={styles.filterSelect}
-            value={selectedMonth}
-            onChange={handleMonthChange}
-          >
-            <option value="">Select Month</option>
-            {months.map((month, index) => (
-              <option key={index} value={month}>
-                {month}
-              </option>
-            ))}
-          </select>
-
-          <label className={styles.filterLabel} htmlFor="year">
-            Filter by Year:
-          </label>
-          <select
-            id="year"
-            className={styles.filterSelect}
-            value={selectedYear}
-            onChange={handleYearChange}
-          >
-            <option value="">Select Year</option>
-            {years.map((year, index) => (
-              <option key={index} value={year}>
-                {year}
-              </option>
-            ))}
-          </select>
+          <div className={styles.navRight1}>
+            <label className={styles.filterLabel} htmlFor="month">
+              Filter by Month:
+            </label>
+            <select
+              id="month"
+              className={styles.filterSelect}
+              value={selectedMonth}
+              onChange={handleMonthChange}
+            >
+              <option value="">Select Month</option>
+              {months.map((month, index) => (
+                <option key={index} value={month}>
+                  {month}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className={styles.navRight2}>
+            <label className={styles.filterLabel} htmlFor="year">
+              Filter by Year:
+            </label>
+            <select
+              id="year"
+              className={styles.filterSelect}
+              value={selectedYear}
+              onChange={handleYearChange}
+            >
+              <option value="">Select Year</option>
+              {years.map((year, index) => (
+                <option key={index} value={year}>
+                  {year}
+                </option>
+              ))}
+            </select>
+          </div>
         </div>
       </nav>
       <div className={styles.articlesGrid}>
@@ -109,7 +118,12 @@ const BlogArticles = () => {
                 <p>{article.date}</p>
                 <h3>{article.title}</h3>
                 <p>{article.Desc}</p>
-                <button className={styles.readMore}>Read More</button>
+                <button
+                  className={styles.readMore}
+                  onClick={() => handleBlog(article.id)}
+                >
+                  Read More
+                </button>
               </div>
             </div>
           ))

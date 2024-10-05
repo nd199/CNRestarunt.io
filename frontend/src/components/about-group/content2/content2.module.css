@@ -71,12 +71,6 @@
 
 /* Media query for screen sizes between 1440px and 360px */
 @media screen and (max-width: 1440px) and (min-width: 360px) {
-  .container {
-    width: 100%;
-    padding: 32px;
-    gap: 32px;
-  }
-
   .circles {
     flex-wrap: wrap;
     gap: 20px;

@@ -163,6 +163,17 @@
   gap: 30px;
 }
 
+.sideNavLink {
+  color: white;
+}
+
+.sideNavLinkActive {
+  padding: 5px;
+  border: none;
+  border-radius: 2px;
+  background-color: #d6f570de;
+}
+
 @media screen and (max-width: 980px) {
   .logoName {
     font-size: 30px;

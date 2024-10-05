@@ -15,6 +15,14 @@ const NavBar = () => {
   const [active, setActive] = useState(false);
   const getUrl = usePathname();
 
+  const navLinks = [
+    { id: 1, title: "Home", url: "/" },
+    { id: 2, title: "About", url: "/about" },
+    { id: 3, title: "Menu", url: "/menu" },
+    { id: 4, title: "Blog", url: "/blog" },
+    { id: 5, title: "Contact", url: "/contact" },
+  ];
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 100) {
@@ -43,13 +51,7 @@ const NavBar = () => {
           <span className={styles.logoName}>Cn Restaurant.io</span>
         </Link>
         <div className={`${styles.navMenu} ${menuOpen ? styles.mobile : ""}`}>
-          {[
-            { id: 1, title: "Home", url: "/" },
-            { id: 2, title: "About", url: "/about" },
-            { id: 3, title: "Menu", url: "/menu" },
-            { id: 4, title: "Blog", url: "/blog" },
-            { id: 5, title: "Contact", url: "/contact" },
-          ].map((link) => (
+          {navLinks.map((link) => (
             <Link
               key={link.id}
               href={link.url}
@@ -62,21 +64,19 @@ const NavBar = () => {
         {menuOpen && (
           <div className={styles.mobileScreenRight}>
             <ul className={styles.sideNavLinks}>
-              <Link href={"/"}>
-                <li className={styles.sideNavLink}>Home</li>
-              </Link>
-              <Link href={"/about"}>
-                <li className={styles.sideNavLink}>About</li>
-              </Link>
-              <Link href={"/menu"}>
-                <li className={styles.sideNavLink}>Menu</li>
-              </Link>
-              <Link href={"/blog"}>
-                <li className={styles.sideNavLink}>Blog</li>
-              </Link>
-              <Link href={"/contact"}>
-                <li className={styles.sideNavLink}>Contact</li>
-              </Link>
+              {navLinks.map((link) => (
+                <Link
+                  key={link.id}
+                  href={link.url}
+                  className={
+                    link.url === getUrl
+                      ? styles.sideNavLinkActive
+                      : styles.sideNavLink
+                  }
+                >
+                  <li className={styles.sideNavLink}>{link.title}</li>
+                </Link>
+              ))}
             </ul>
           </div>
         )}

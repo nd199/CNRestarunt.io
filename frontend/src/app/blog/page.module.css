@@ -106,3 +106,65 @@
 .readMore:hover {
   background-color: #005bb5;
 }
+
+@media screen and (max-width: 1024px) {
+  .navbar {
+    gap: 10px;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .searchInput {
+    width: 100%;
+  }
+
+  .filterLabel {
+    font-size: 13px;
+  }
+
+  .filterSelect {
+    font-size: 13px;
+  }
+
+  .navRight {
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .filterSelect {
+    width: auto;
+  }
+
+  .navRight {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .articlesGrid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .articleCard {
+    width: 315px;
+  }
+
+  .navRight1,
+  .navRight2 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
