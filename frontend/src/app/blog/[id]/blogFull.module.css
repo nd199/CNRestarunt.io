@@ -59,13 +59,6 @@
   text-align: center;
 }
 
-.blogDate {
-  font-size: 1rem;
-  color: #888;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
 .blogContent {
   line-height: 1.6;
   color: #444;
@@ -94,6 +87,27 @@
   background-color: #f9f9f9;
 }
 
+.crossedOut {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.resetButton {
+  padding: 10px 15px;
+  margin-top: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.resetButton:hover {
+  background-color: #005bb5;
+}
+
 @media (max-width: 768px) {
   .blogContainer {
     width: 100%;
@@ -111,5 +125,9 @@
 
   .prepPoint {
     font-size: 1rem;
+  }
+
+  .resetButton {
+    width: 100%;
   }
 }
