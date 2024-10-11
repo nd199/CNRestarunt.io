@@ -132,14 +132,14 @@ p {
     transform: translateX(-100%);
   }
   to {
-    opacity: 1; /* End visible */
-    transform: translateX(0); /* End at original position */
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
 @keyframes scaleUp {
   to {
-    opacity: 1; /* End visible */
-    transform: scale(1); /* End at original size */
+    opacity: 1;
+    transform: scale(1);
   }
 }

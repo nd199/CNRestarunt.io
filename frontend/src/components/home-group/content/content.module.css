@@ -15,8 +15,16 @@
   transition: transform 0.3s ease;
 }
 
+.sec2title {
+  font-family: "Playfair Display";
+}
+
 .Image:hover {
   transform: scale(1.1);
+}
+
+.sec2title {
+  font-size: 40px;
 }
 
 .container {
@@ -87,7 +95,6 @@
   line-height: 1.5;
 }
 
-/* Media queries for responsiveness */
 @media screen and (max-width: 1024px) {
   .container {
     width: 90%;
@@ -118,7 +125,11 @@
   }
 
   .subTitle {
-    font-size: 14px;
+    font-size: 18px;
+  }
+
+  .quickPoint > p {
+    font-size: 15px;
   }
 }
 
@@ -136,16 +147,16 @@
     font-size: 22px;
   }
 
-  .subTitle {
-    font-size: 12px;
-  }
-
-  .quickPoint {
-    font-size: 12px;
-  }
-
   .Image2 {
     display: none;
+  }
+
+  .subTitle {
+    font-size: 18px;
+  }
+
+  .quickPoint > p {
+    font-size: 15px;
   }
 }
 
@@ -171,11 +182,11 @@
   }
 
   .subTitle {
-    font-size: 10px;
+    font-size: 18px;
   }
 
-  .quickPoint {
-    font-size: 10px;
+  .quickPoint > p {
+    font-size: 15px;
   }
 }
 
@@ -185,12 +196,13 @@
     gap: 4px;
   }
 
-  .Image{
+  .Image {
     height: 30% !important;
   }
 
-  .sec2title{
-    font-size: 18px;
+  .sec2title {
+    font-size: 20px;
+    font-weight: 600;
   }
 
   .section {
@@ -202,10 +214,10 @@
   }
 
   .subTitle {
-    font-size: 8px;
+    font-size: 18px;
   }
 
-  .quickPoint {
-    font-size: 8px;
+  .quickPoint > p {
+    font-size: 15px;
   }
 }

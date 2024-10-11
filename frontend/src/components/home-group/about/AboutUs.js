@@ -39,7 +39,7 @@ const AboutUs = () => {
           </div>
         </div>
         <div className={(styles.section, styles.sectionDesc)}>
-          <h5 className={(logoFnt.className, styles.title2)}>
+          <h5 className={styles.title2}>
             We provide healthy food for your family.
           </h5>
           <p className={styles.p1}>

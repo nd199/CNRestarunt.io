@@ -1,4 +1,3 @@
-/* Default Styles */
 .page {
   height: calc(100vh - 80px);
   display: flex;
@@ -19,6 +18,10 @@
 
 .title {
   font-size: 55px;
+}
+
+.title2 {
+  font-family: "Playfair Display";
 }
 
 .videoSection {
@@ -65,11 +68,13 @@
 .p1 {
   font-size: 15px;
   font-weight: 400;
+  width: 680px;
 }
 
 .p2 {
   font-size: 15px;
   font-weight: 300;
+  width: 680px;
 }
 
 .MoreButton {
@@ -116,45 +121,17 @@
   color: #fff;
 }
 
-/* Large screens */
-@media screen and (max-width: 1440px) {
-  .sec {
-    padding: 50px;
-    gap: 40px;
-  }
-
-  .title {
-    font-size: 50px;
-  }
-
-  .section {
-    padding: 25px;
-    width: 55%;
-  }
-
-  .overlay {
-    width: 250px;
-    height: 200px;
-  }
-
-  .overlayTitle {
-    font-size: 16px;
-  }
-
-  .overlaySubtitle {
-    font-size: 11px;
-  }
-}
-
-/* Medium screens */
 @media screen and (max-width: 1024px) {
   .sec {
-    padding: 40px;
     gap: 30px;
   }
 
   .sec > * {
     flex: 1;
+  }
+
+  .sectionDesc {
+    max-width: 500px;
   }
 
   .title {
@@ -173,6 +150,16 @@
     right: -40px;
   }
 
+  .p1 {
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .p2 {
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+
   .overlayTitle {
     font-size: 14px;
   }
@@ -182,8 +169,11 @@
   }
 }
 
-/* Small screens (tablets) */
 @media screen and (max-width: 768px) {
+  .page {
+    height: auto;
+  }
+
   .sec {
     flex-direction: column;
     padding: 30px;
@@ -206,7 +196,7 @@
     max-height: fit-content;
   }
 
-  .sectionDesc{
+  .sectionDesc {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -225,7 +215,7 @@
     font-size: 9px;
   }
 
-  .p2{
+  .p2 {
     display: none;
   }
 }
@@ -242,18 +232,31 @@
     font-size: 30px;
   }
 
+  .title2 {
+    font-family: "Playfair Display";
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  .p1 {
+    max-width: 50%;
+    flex-wrap: wrap;
+    font-size: 15px;
+  }
+
   .section {
     width: 90%;
     padding: 10px;
   }
 
-  .sectionDesc{
+  .sectionDesc {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 37px;
     padding: 10px 10px;
+    flex-wrap: wrap;
   }
 
   .videoSection {
@@ -269,7 +272,6 @@
     max-width: 90%;
     max-height: 80%;
   }
-
 
   .section {
     gap: 0px;
@@ -298,12 +300,15 @@
     font-size: 8px;
   }
 
+  .p1 {
+    flex-wrap: wrap;
+  }
+
   .p2 {
     display: none;
   }
 }
 
-/* Very small screens */
 @media screen and (max-width: 360px) {
   .sec {
     flex-direction: column;
@@ -312,8 +317,12 @@
   }
 
   .title {
-    font-size: 30px;
-    float: inline-start;
+    font-size: 25px;
+  }
+
+  .title2 {
+    font-family: "Playfair Display";
+    font-size: 18px;
   }
 
   .section {
@@ -321,13 +330,14 @@
     padding: 5px;
   }
 
-  .sectionDesc{
+  .sectionDesc {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 60px;
     padding: 5px 10px;
+    flex-wrap: wrap;
   }
 
   .videoSection {
@@ -341,11 +351,11 @@
     max-width: 90%;
   }
 
-
   .section {
     gap: 0px;
     width: 80%;
     padding: 15px;
+    flex-wrap: wrap;
   }
 
   .overlay {
@@ -367,6 +377,11 @@
 
   .overlaySubtitle {
     font-size: 7px;
+  }
+
+  .p1 {
+    max-width: 40%;
+    flex-wrap: wrap;
   }
 
   .p2 {
