@@ -17,7 +17,7 @@ const Dashboard = () => {
 
   const filteredItems = items.filter((item) => {
     const matchCategory =
-      category === "All" || item.category.includes(category);
+    category === "All" || item.category.includes(category);
     const matchType = type === "All" || item.type === type;
     return matchCategory && matchType;
   });
